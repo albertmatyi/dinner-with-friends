@@ -4,4 +4,8 @@ var allowInsert = function(userId, doc) {
 };
 Events.allow({
 	insert: allowInsert
-})
+});
+
+Meteor.publish('event', function (id) {
+    return Events.find(id);
+});
