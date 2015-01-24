@@ -1,6 +1,6 @@
 Template.recipeItem.helpers({
   path: function () {
-    return Router.path('recipe', this.recipe);
+    return Router.path('event', this.recipe);
   },
   
   highlightedClass: function () {

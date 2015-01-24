@@ -1,0 +1,25 @@
+<template name="event">
+    <div class="event">
+        {{#nav title=event.title black=true}}
+            <a class="back btn btn-primary" href="">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                Back
+            </a>
+        {{/nav}}
+
+        <div class="content-scrollable">
+            <img src="/img/dinners/dp1.jpg" />
+            <b>Description:</b>
+            {{event.description}}
+            <br>
+            <b>Time:</b>
+            {{formatTime event.time}}
+            <br>
+            <b>Address:</b>
+            {{event.address}}
+            <br>
+            <b>Guest limit:</b>
+            {{event.guestLimit}}
+        </div>
+    </div>
+</template>
