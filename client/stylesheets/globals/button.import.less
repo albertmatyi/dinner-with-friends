@@ -63,6 +63,14 @@
     &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
   }
 
+  &[class*="facebook"] {
+    background-color: @color-facebook;
+    color: @color-empty;
+
+    &:hover { background-color: lighten(@color-facebook, 10%); }
+    &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
+  }
+
   &[class*="camera"] {
     border-radius: 10em;
     box-shadow: @color-primary 0 0 0px 2px inset;

@@ -126,6 +126,10 @@ Template.appBody.helpers({
   
   notifications: function() {
     return notifications.find();
+  },
+
+  user: function() {
+    return Meteor.user();
   }
 });
 
@@ -151,6 +155,29 @@ Template.appBody.events({
       event.preventDefault();
       window.open(event.target.href, '_system');
     }
+  },
+
+  'click a.js-login': function (event) {
+    event.preventDefault();
+    Overlay.open('authOverlay');
+  },
+
+  'click a.js-logout': function(event) {
+    event.preventDefault();
+    Meteor.logout( function(error) {
+      var overlayMessage = {};
+      if (error) {
+        overlayMessage.title = "Error";
+        overlayMessage.message = "Something went wrong on logout.";
+      } else {
+        overlayMessage.title = "Logged out";
+        overlayMessage.message = "";
+      }
+      Overlay.open('authOverlayLoggedOut', overlayMessage);
+      window.setTimeout(function() {
+        Overlay.close()
+      }, 2000);
+    });
   },
 
   'click .content-overlay': function(event) {

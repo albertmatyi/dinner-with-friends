@@ -9,10 +9,13 @@ Template.authOverlay.created = function() {
     if (Meteor.userId() && Overlay.template() === 'authOverlay')
       Overlay.close();
   });
-}
+};
 
 Template.authOverlay.events({
-  'click .js-signin': function() {
+  'click .js-signin-twitter': function() {
     Meteor.loginWithTwitter({loginStyle: 'redirect'});
+  },
+  'click .js-signin-facebook': function() {
+    Meteor.loginWithFacebook({loginStyle: 'redirect'});
   }
 });
