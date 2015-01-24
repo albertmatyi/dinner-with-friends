@@ -1,0 +1,29 @@
+<template name="eventGuests">
+    <table class="table guests">
+        <caption>Attendees</caption>
+        <tbody>
+				{{#each guestList}}
+					{{> eventGuest}}
+				{{/each}}
+        </tbody>
+			{{# if canAttend }}
+          <tr class="attend-row">
+						{{>attendButton}}
+          </tr>
+			{{/if}}
+    </table>
+</template>
+<template name="attendButton">
+    <button class="attend btn btn-primary">Attend</button>
+</template>
+<template name="eventGuest">
+    <tr class="guest">
+        <td>
+            <div class="image"
+                 style="{{#with image}}background-image: url(this);{{/with}}"></div>
+        </td>
+        <td class="name">
+					{{name}}
+        </td>
+    </tr>
+</template>

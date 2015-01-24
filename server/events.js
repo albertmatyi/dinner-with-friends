@@ -5,9 +5,13 @@ var allowInsert = function(userId, doc) {
 	return !!userId;
 };
 Events.allow({
-	insert: allowInsert
+	insert: allowInsert,
+	update: function() {
+		return true;
+	}
 });
 
+
 Meteor.publish('event', function (id) {
-    return Events.find(id);
+	return Events.find(id);
 });

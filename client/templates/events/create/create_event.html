@@ -8,6 +8,9 @@
 
         <div class="content-scrollable">
 					{{> eventForm}}
+						{{#with virtEv}}
+					{{> eventGuests}}
+					{{/with}}
         </div>
     </div>
 </template>
