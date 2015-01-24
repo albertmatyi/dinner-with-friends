@@ -10,45 +10,42 @@
         <div class="content-scrollable">
 					{{> eventForm}}
         </div>
-
     </div>
 </template>
 
 <template name="eventForm">
-    <div class="row">
-        <div class="col-xs-12">
-
-
-            <form action="" class="new-event-form">
-                <div class="form-group">
-                    <label for="eventTitle">Title</label>
-                    <input type="text" name="title" class="form-control"
-                           placeholder="Cozy gardenparty"/>
-                </div>
-                <div class="form-group">
-                    <label for="eventDate">When</label>
-                    <input type="datetime-local" id="eventDate" name="date"
-                           class="form-control"/>
-                </div>
-
-                <div class="form-group">
-                    <label for="eventLocation">Where</label>
-                    <input type="text" id="eventLocation" name="location"
-                           class="form-control" placeholder="My backyard"/>
-                </div>
-                <div class="form-group">
-                    <label for="eventGuestLimit">No. of Guests</label>
-                    <input type="number" id="eventGuestLimit" name="guests"
-                           class="form-control" placeholder="5ive!"/>
-                </div>
-
-                <div class="form-group">
-                    <button class="btn btn-primary">
-                        <span class="glyphicon glyphicon-glass"></span>
-                        Host!
-                    </button>
-                </div>
-            </form>
+    <form action="" class="new-event-form">
+        <div class="form-group">
+            <label for="eventTitle">Title</label>
+            <input type="text" name="title" value="{{title}}"
+                   class="form-control"
+                   placeholder="Cozy gardenparty"/>
         </div>
-    </div>
+        <div class="form-group">
+            <label for="eventDate">When</label>
+            <input type="datetime-local" id="eventDate" name="date"
+                   value="{{date}}"
+                   class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label for="eventLocation">Where</label>
+            <input type="text" id="eventLocation" name="location"
+                   value="{{location}}"
+                   class="form-control" placeholder="My backyard"/>
+        </div>
+        <div class="form-group">
+            <label for="eventGuestLimit">No. of Guests</label>
+            <input type="number" id="eventGuestLimit" name="guests"
+                   value="{{guests}}"
+                   class="form-control" placeholder="5ive!"/>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-glass"></span>
+                Host!
+            </button>
+        </div>
+    </form>
 </template>
