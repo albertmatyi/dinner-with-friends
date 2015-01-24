@@ -11,5 +11,9 @@ Template.recipeItem.helpers({
   bookmarkCount: function () {
     var count = BookmarkCounts.findOne({recipeName: this.name});
     return count && count.count;
+  },
+
+  image: function() {
+    return this.image || '/img/dinners/dp1.jpg';
   }
 });
