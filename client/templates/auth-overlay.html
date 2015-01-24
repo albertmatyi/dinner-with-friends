@@ -7,6 +7,16 @@
       <div class="subtitle-overlay">To bookmark and share your favorite recipes</div>
     </div>
 
-    <button class="js-signin btn-twitter">Sign In With Twitter</button>
+    <button class="js-signin-twitter btn-twitter">Sign In With Twitter</button>
+    <button class="js-signin-facebook btn-facebook">Sign In With Facebook</button>
   </div>
+</template>
+
+<template name="authOverlayLoggedOut">
+    <div class="overlay">
+        <div class="wrapper-heading">
+            <div class="title-overlay">{{title}}</div>
+            <div class="subtitle-overlay">{{message}}</div>
+        </div>
+    </div>
 </template>

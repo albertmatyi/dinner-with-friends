@@ -8,7 +8,7 @@ Activities.allow({
 
 Activities.latest = function() {
   return Activities.find({}, {sort: {date: -1}, limit: 1});
-}
+};
 
 Meteor.methods({
   createActivity: function(activity, tweet, loc) {
@@ -41,7 +41,7 @@ Meteor.methods({
 if (Meteor.isServer) {
   // Uses the Npm request module directly as provided by the request local pkg
   var callTwitter = function(options) {
-    var config = Meteor.settings.twitter
+    var config = Meteor.settings.twitter;
     var userConfig = Meteor.user().services.twitter;
 
     options.oauth = {
@@ -52,7 +52,7 @@ if (Meteor.isServer) {
     };
 
     return Request(options);
-  }
+  };
   
   var tweetActivity = function(activity) {
     // creates the tweet text, optionally truncating to fit the appended text
@@ -90,7 +90,7 @@ if (Meteor.isServer) {
 
     if (response.statusCode !== 200)
       throw new Meteor.Error(500, 'Unable to create tweet');
-  }
+  };
   
   var getLocationPlace = function(loc) {
     var url = 'https://api.twitter.com/1.1/geo/reverse_geocode.json'

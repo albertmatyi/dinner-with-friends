@@ -77,6 +77,9 @@ Router.map(function() {
   this.route('about');
   this.route('recipe', {path: '/recipes/:name'});
   this.route('admin', { layoutTemplate: null });
+  this.route('logout', {onAfterAction: function() {
+    this.redirect('home');
+  }});
 });
 
 Router.onBeforeAction('dataNotFound', {only: 'recipe'});
