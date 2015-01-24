@@ -15,7 +15,7 @@ var eventData = [{
                  {
 	                 title: 'Breakfast for singles', 
 	                 description: 'Todo bien, si claro, come and join us, we are bunch of singles looking for singles.',
-	                 time: new Date(2015, 2, 20, 09, 00),
+	                 time: new Date(2015, 2, 20, 9, 00),
 	                 guestLimit: 6,
 	                 address: 'Türkenstraße 61 80799 München'
                  },
@@ -36,7 +36,7 @@ var eventData = [{
                  {
 	                 title: 'German sausage breakfast', 
 	                 description: 'Come and try the traditional weißwurst breakfast with Hanz Mustermann.',
-	                 time: new Date(2015, 2, 17, 09, 00),
+	                 time: new Date(2015, 2, 17, 9, 00),
 	                 guestLimit: 4,
 	                 address: 'Leopoldstraße 80 80636 München'
                  },
