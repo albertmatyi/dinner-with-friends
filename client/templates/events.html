@@ -1,0 +1,30 @@
+<template name="events">
+  <div class="page events">
+    {{#nav title='Events' black=true}}
+      {{> newRecipeButton}}
+    {{/nav}}
+
+    <div class="content-scrollable">
+      <div class="list-events">
+        {{#each events}}
+          {{#if highlighted}}
+            {{> recipeItem recipe=this size='large'}}
+          {{else}}
+            {{> recipeItem recipe=this size='small'}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="newRecipeButton">
+    <ul class="nav navbar-nav">
+        <li class="">
+            <a href="{{pathFor 'create-event'}}" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"></span>
+                New
+            </a>
+        </li>
+    </ul>
+</template>

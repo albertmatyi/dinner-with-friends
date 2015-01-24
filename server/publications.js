@@ -1,3 +1,7 @@
+Meteor.publish('events', function() {
+  return Events.find({});
+});
+
 Meteor.publish('bookmarkCounts', function() {
   return BookmarkCounts.find();
 });
