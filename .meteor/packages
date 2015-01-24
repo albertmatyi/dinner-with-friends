@@ -25,3 +25,4 @@ mdg:geolocation
 
 # Packages from the app:
 request
+percolate:migrations
