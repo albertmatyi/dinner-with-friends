@@ -1,5 +1,7 @@
 var allowInsert = function(userId, doc) {
 	console.log('welcome', userId, 'you are allowed: ' + !!userId);
+	//as a sideeffect add userId
+	doc.userId = userId;
 	return !!userId;
 };
 Events.allow({
