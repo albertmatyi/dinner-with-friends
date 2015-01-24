@@ -27,3 +27,4 @@ mdg:geolocation
 request
 percolate:migrations
 accounts-facebook
+momentjs:moment
