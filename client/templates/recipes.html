@@ -1,21 +1,19 @@
-<template name="recipes">
-    <div class="page recipes">
-			{{#nav title='Recipes' black=true}}
-				{{> newRecipeButton}}
-			{{/nav}}
+<template name="events">
+  <div class="page events">
+    {{#nav title='Recipes' black=true}}
+      {{> newRecipeButton}}
+    {{/nav}}
 
-        <div class="content-scrollable">
-            <div class="list-recipes">
-							{{#each this}}
-								{{#if highlighted}}
-									{{> recipeItem recipe=this size='large'}}
-								{{else}}
-									{{> recipeItem recipe=this size='small'}}
-								{{/if}}
-							{{/each}}
-            </div>
-        </div>
-
+    <div class="content-scrollable">
+      <div class="list-events">
+        {{#each events}}
+          {{#if highlighted}}
+            {{> recipeItem recipe=this size='large'}}
+          {{else}}
+            {{> recipeItem recipe=this size='small'}}
+          {{/if}}
+        {{/each}}
+      </div>
     </div>
 </template>
 
