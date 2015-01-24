@@ -1,11 +1,11 @@
 <template name="recipeItem">
-  <a class="item-recipe {{highlightedClass}}" href="{{path}}">
-    {{#with recipe}}
-      <span class="attribution">
+    <a class="item-recipe {{highlightedClass}}" href="{{path}}">
+			{{#with recipe}}
+          <span class="attribution">
         <span class="title-recipe">{{title}}</span>
       </span>
-    {{/with}}
+          <img src="{{image}}"/>
+			{{/with}}
 
-    <img src="{{image}}" />
-  </a>
+    </a>
 </template>
