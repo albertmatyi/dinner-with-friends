@@ -74,6 +74,17 @@ Router.map(function() {
 	this.route('feed');
 	this.route('recipes');
 	this.route('create-event', {template: 'createEvent'});
+	this.route('event', {
+        path: 'event/:_id',
+        waitOn: function() {
+            return Meteor.subscribe('event', this.params._id);
+        },
+        data: function () {
+
+            var event = Events.findOne(this.params._id);
+            return { 'event': event}
+        }
+    });
 	this.route('bookmarks');
 	this.route('about');
 	this.route('recipe', {path: '/recipes/:name'});
