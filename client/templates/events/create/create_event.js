@@ -29,7 +29,10 @@ Template.eventForm.events({
 			data[el.name] = el.value;
 		});
 		data.image = Session.get('events.new.image');
-
+		if (!data.title || !data.guests) {
+			alert('Please specify a title and guests number.');
+			return;
+		}
 		if (this._id) {
 			var self = this;
 			Events.update(this._id, {$set: data}, {}, function(err) {
